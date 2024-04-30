@@ -1,0 +1,55 @@
+// Global css
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+*,
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+	font-size: 10px;
+	
+	@include respond(tab-land){
+		font-size: 56.25%;
+	}
+	@include respond(tab-port){
+		font-size: 50%;
+	}
+	@include respond(phone){
+		font-size: 30%;
+	}
+	@include respond(big-desktop){
+		font-size: 75%;
+	}
+}
+body {
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  padding: 3rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+
+  @include respond(tab-port){
+	padding: 0;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li{
+  list-style-type: none;
+}
+
+::selection{
+	background-color: $color-primary;
+	color: $white;
+}
